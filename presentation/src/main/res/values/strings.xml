@@ -1,0 +1,20 @@
+<resources>
+    <string name="name_field">Name:</string>
+    <string name="status_field">Status:</string>
+    <string name="species_field">Species:</string>
+    <string name="subspecies_field">Subspecies:</string>
+    <string name="gender_field">Gender:</string>
+    <string name="origin_field">Origin:</string>
+    <string name="location_field">Location:</string>
+    <string name="female_gender">Female</string>
+    <string name="male_gender">Male</string>
+    <string name="genderless_gender">Genderless</string>
+    <string name="unknown_gender">@string/unknown_value</string>
+    <string name="alive_status">Alive</string>
+    <string name="dead_status">Dead</string>
+    <string name="unknown_status">@string/unknown_value</string>
+    <string name="unknown_value">Unknown</string>
+    <string name="unavailable_service_title">Unavailable service</string>
+    <string name="unavailable_service_body">Right now it seems like data is unavailable. Please, try to check your connection or try to open your app again later.</string>
+    <string name="unavailable_service_ok">Accept</string>
+</resources>

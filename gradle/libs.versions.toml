@@ -1,0 +1,94 @@
+[versions]
+minSdk = "26"
+targetSdk = "35"
+compileSdk = "35"
+versionCode = "1"
+versionName = "1.0"
+
+androidGradlePlugin = "8.9.1"
+kotlinGradlePlugin = "2.1.20"
+
+coreKtx = "1.15.0"
+lifecycleKtx = "2.8.7"
+
+coroutine = "1.10.1"
+
+composeActivity = "1.10.1"
+composeBOM = "2025.03.01"
+composeLifecycle = "2.8.7"
+composeNavigation = "2.8.9"
+
+koin = "4.0.4"
+
+splashScreen = "1.0.1"
+
+coil = "3.1.0"
+
+apollo = "4.1.1"
+
+junit5 = "5.12.1"
+
+mockk = "1.13.17"
+
+turbine = "1.2.0"
+
+androidxTestJunitKtx = "1.2.1"
+
+[libraries]
+android-plugin = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
+kotlin-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
+
+
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+lifecycle-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleKtx" }
+
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBOM" }
+compose-material = { module = "androidx.compose.material3:material3" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "composeLifecycle" }
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "composeNavigation" }
+
+coroutine-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutine" }
+coroutine-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutine" }
+
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+koin-test = { module = "io.insert-koin:koin-test-junit5", version.ref = "koin" }
+
+splash-screen = { module = "androidx.core:core-splashscreen", version.ref = "splashScreen" }
+
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
+coil-network = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil" }
+
+apollo-runtime = { module = "com.apollographql.apollo:apollo-runtime", version.ref = "apollo" }
+apollo-cache = { module = "com.apollographql.apollo:apollo-normalized-cache-jvm", version.ref = "apollo" }
+
+
+junit5-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }
+junit5-params = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit5" }
+junit5-engine = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit5" }
+
+coroutine-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutine" }
+
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+
+
+compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+
+test-junit-ktx = { module = "androidx.test.ext:junit-ktx", version.ref = "androidxTestJunitKtx" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+java-library = { id = "java-library" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinGradlePlugin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlinGradlePlugin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinGradlePlugin" }
+graphql-apollo = { id = "com.apollographql.apollo", version.ref = "apollo" }
