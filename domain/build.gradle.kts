@@ -7,4 +7,6 @@ dependencies {
 
     implementation(projects.lang)
 
+    testImplementation(projects.sharedTest)
+
 }

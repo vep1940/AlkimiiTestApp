@@ -20,7 +20,10 @@ fun NavGraphBuilder.listScreen(
         val viewModel: ListViewModel = koinViewModel()
         val screenState by viewModel.screenState.collectAsStateWithLifecycle()
         val action = ListScreenAction(
-            onClickItem = onClickItem
+            onClickItem = onClickItem,
+            onClickFilter = { viewModel.applyGender(it) },
+            onClickFav = { viewModel.onClickFav(it) },
+            onEnd = { viewModel.getNextCharactersPage() },
         )
         ListScreen(uiState = screenState, action = action)
     }

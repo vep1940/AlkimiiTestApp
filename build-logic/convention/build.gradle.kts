@@ -34,6 +34,10 @@ gradlePlugin {
             id = "vep1940.graphql"
             implementationClass = "GraphQlConventionPlugin"
         }
+        register("sqlDelight") {
+            id = "vep1940.sql.delight"
+            implementationClass = "SqlDelightConventionPlugin"
+        }
         register("unitTest") {
             id = "vep1940.unit.test"
             implementationClass = "UnitTestConventionPlugin"

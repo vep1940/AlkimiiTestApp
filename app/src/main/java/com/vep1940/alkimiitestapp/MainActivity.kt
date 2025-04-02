@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.safeContentPadding
@@ -16,6 +17,7 @@ import com.vep1940.alkimiitestapp.presentation.screen.detail.navigateToDetailScr
 import com.vep1940.alkimiitestapp.presentation.screen.list.Constant.LIST_SCREEN_ROUTE
 import com.vep1940.alkimiitestapp.presentation.screen.list.listScreen
 import com.vep1940.alkimiitestapp.presentation.theme.AlkimiiTestAppTheme
+import com.vep1940.alkimiitestapp.presentation.theme.LightBlue
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +33,7 @@ class MainActivity : ComponentActivity() {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
+                        .background(color = LightBlue)
                         .safeContentPadding()
                 ) {
                     val navController = rememberNavController()

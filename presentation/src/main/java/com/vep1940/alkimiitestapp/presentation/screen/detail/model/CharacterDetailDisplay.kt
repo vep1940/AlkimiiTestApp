@@ -14,6 +14,7 @@ internal data class CharacterDetailDisplay(
     val origin: String?,
     val location: String?,
     val imageUrl: String?,
+    val isFavourite: Boolean,
 )
 
 internal fun Character.toPresentation() = CharacterDetailDisplay(
@@ -25,4 +26,5 @@ internal fun Character.toPresentation() = CharacterDetailDisplay(
     origin = origin,
     location = location,
     imageUrl = imageUrl,
+    isFavourite = false,
 )

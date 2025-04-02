@@ -5,12 +5,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.vep1940.alkimiitestapp.presentation.components.LoadingScreen
 
 @Composable
-internal fun ListLoadingScreen() {
+internal fun ListLoading() {
     LoadingScreen()
 }
 
 @Preview
 @Composable
-private fun ListLoadingScreenPreview() {
-    ListLoadingScreen()
+private fun ListLoadingPreview() {
+    ListLoading()
 }

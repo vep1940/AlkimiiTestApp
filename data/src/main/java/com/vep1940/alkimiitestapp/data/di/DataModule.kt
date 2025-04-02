@@ -1,7 +1,12 @@
 package com.vep1940.alkimiitestapp.data.di
 
+import app.cash.sqldelight.db.SqlDriver
+import app.cash.sqldelight.driver.android.AndroidSqliteDriver
 import com.apollographql.apollo.ApolloClient
-import com.vep1940.alkimiitestapp.data.datasource.CharacterDatasource
+import com.vep1940.alkimiitestapp.FavCharacterDatabase
+import com.vep1940.alkimiitestapp.data.datasource.CharacterLocalDatasource
+import com.vep1940.alkimiitestapp.data.datasource.CharacterNetworkDatasource
+import com.vep1940.alkimiitestapp.data.datasource.FavouriteLocalDatasource
 import com.vep1940.alkimiitestapp.data.graphql.ApolloClientConfig
 import com.vep1940.alkimiitestapp.data.repository.CharacterRepositoryImpl
 import com.vep1940.alkimiitestapp.domain.repository.CharacterRepository
@@ -16,7 +21,12 @@ val dataModule = module {
 
     single<ApolloClient> { ApolloClientConfig.getApolloClient() }
 
-    singleOf(::CharacterDatasource)
+    single<FavCharacterDatabase> { FavCharacterDatabase(get()) }
+    single<SqlDriver> { AndroidSqliteDriver(FavCharacterDatabase.Schema, get(), "favouriteCharacter.db")}
 
-    factory<CharacterRepository> { CharacterRepositoryImpl(get(), get()) }
+    singleOf(::CharacterLocalDatasource)
+    singleOf(::CharacterNetworkDatasource)
+    singleOf(::FavouriteLocalDatasource)
+
+    factory<CharacterRepository> { CharacterRepositoryImpl(get(), get(), get(), get()) }
 }

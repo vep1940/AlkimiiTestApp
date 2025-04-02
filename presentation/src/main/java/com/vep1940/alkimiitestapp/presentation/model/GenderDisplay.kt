@@ -19,6 +19,13 @@ internal fun Gender.toPresentation() = when(this) {
     Gender.UNKNOWN -> GenderDisplay.UNKNOWN
 }
 
+internal fun GenderDisplay.toDomain() = when(this) {
+    GenderDisplay.FEMALE -> Gender.FEMALE
+    GenderDisplay.MALE -> Gender.MALE
+    GenderDisplay.GENDERLESS -> Gender.GENDERLESS
+    GenderDisplay.UNKNOWN -> Gender.UNKNOWN
+}
+
 @Composable
 internal fun GenderDisplay.getText() = when(this){
     GenderDisplay.FEMALE -> stringResource(R.string.female_gender)

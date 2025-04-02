@@ -5,6 +5,8 @@
     <string name="subspecies_field">Subspecies:</string>
     <string name="gender_field">Gender:</string>
     <string name="origin_field">Origin:</string>
+    <string name="add_to_favs">Add to favourites</string>
+    <string name="remove_from_favs">Remove from favourites</string>
     <string name="location_field">Location:</string>
     <string name="female_gender">Female</string>
     <string name="male_gender">Male</string>
@@ -14,7 +16,10 @@
     <string name="dead_status">Dead</string>
     <string name="unknown_status">@string/unknown_value</string>
     <string name="unknown_value">Unknown</string>
+    <string name="next_page_error_message">There has been an error</string>
+    <string name="next_page_error_button">Retry</string>
+    <string name="list_end_reached">You have reached the end of the list!</string>
     <string name="unavailable_service_title">Unavailable service</string>
     <string name="unavailable_service_body">Right now it seems like data is unavailable. Please, try to check your connection or try to open your app again later.</string>
-    <string name="unavailable_service_ok">Accept</string>
+    <string name="unavailable_service_ok">Retry</string>
 </resources>

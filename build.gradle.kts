@@ -7,4 +7,5 @@ plugins {
     alias(libs.plugins.kotlin.jvm) apply false
     alias(libs.plugins.compose.compiler) apply false
     alias(libs.plugins.graphql.apollo) apply false
+    alias(libs.plugins.sql.delight) apply false
 }

@@ -5,12 +5,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.vep1940.alkimiitestapp.presentation.components.ErrorDialog
 
 @Composable
-internal fun ListErrorScreen() {
-    ErrorDialog()
+internal fun ListError(
+    onClick: () -> Unit,
+) {
+    ErrorDialog(onDismissRequest = onClick)
 }
 
 @Preview
 @Composable
-private fun ListErrorScreenPreview() {
-    ListErrorScreen()
+private fun ListErrorPreview() {
+    ListError({})
 }

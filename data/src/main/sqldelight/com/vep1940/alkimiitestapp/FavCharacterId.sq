@@ -1,0 +1,19 @@
+CREATE TABLE FavCharacterId(
+    characterId INTEGER PRIMARY KEY NOT NULL
+);
+
+getAll:
+SELECT *
+FROM FavCharacterId;
+
+get:
+SELECT characterId
+FROM FavCharacterId
+WHERE characterId = ?;
+
+insert:
+INSERT INTO FavCharacterId (characterId)
+VALUES (?);
+
+delete:
+DELETE FROM FavCharacterId WHERE characterId = ?;
